@@ -1,8 +1,22 @@
 import React from 'react'
 
 const AddContact = () => {
-  return (
+
+    const [name, setName] = useState("");
+
+
+  return (<>
     <div>AddContact</div>
+    <form>
+  <label>
+    Name:
+    <input type="text" name="name" />
+  </label>
+  <input type="submit" value="Submit" />
+</form>
+
+    </>
+
   )
 }
 
