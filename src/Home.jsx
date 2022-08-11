@@ -9,7 +9,7 @@ const Home = () => {
     const [user, setUser]=useState();
 
     useEffect(()=>{
-        axios.get(`https://62f3372818493ca21f3f303e.mockapi.io/user/add`)
+        axios.get(`https://62a59821b9b74f766a3c09a4.mockapi.io/crud-youtube`)
         .then((response) => {
             console.log("res",response.data);
             setUser(response.data);
@@ -42,22 +42,20 @@ function deleteUser(){
   <tbody>
 
         
-    {/* {user.map((person)=>{
+    {user.map((person)=>{
     
     return(
-        <><div key={person.id}></div>{person.name}</>
-    )
+        <>
          
-          <th> <div key={person.id}></div></th>
+        //   <td key={person.id}></td>
          <td>{person.name}</td>
          <td>{person.email}</td>
          <td>{person.phone}</td>
          <td><button className='btn-success'>Edit</button></td>
          <td><button className='btn-danger'>Delete</button></td> 
-       
+       </>)
     })}
-   */}
-
+  
     <tr>
       <th scope="row">1</th>
       <td>Sanya</td>
