@@ -11,14 +11,19 @@ const AddContact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("clciekd");
-    axios
-      .post("https://62f3372818493ca21f3f303e.mockapi.io/user", {
+    let res= axios
+      .post("http://localhost:3000/posts", {
         name: name,
         email: email,
       })
-      .then(() => {
-        history("/");
-      });
+    //   .then(() => {
+    //     history("/");
+    //   });
+       if(res){
+        alert("data submitted");
+       }else{
+        alert("something went wrong")
+       }
   };
 
   return (

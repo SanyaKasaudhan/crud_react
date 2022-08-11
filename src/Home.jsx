@@ -8,13 +8,13 @@ const Home = () => {
 
     const [user, setUser]=useState();
 
-    useEffect(()=>{
-        axios.get(`https://62a59821b9b74f766a3c09a4.mockapi.io/crud-youtube`)
-        .then((response) => {
-            console.log("res",response.data);
-            setUser(response.data);
-        })
-    })
+    // useEffect(()=>{
+    //     axios.get(`https://62a59821b9b74f766a3c09a4.mockapi.io/crud-youtube`)
+    //     .then((response) => {
+    //         console.log("res",response.data);
+    //         setUser(response.data);
+    //     })
+    // })
 
 function deleteUser(){
 
