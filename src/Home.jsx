@@ -8,16 +8,21 @@ const Home = () => {
 
     const [user, setUser]=useState();
 
-    // useEffect(()=>{
-    //     axios.get(`https://62a59821b9b74f766a3c09a4.mockapi.io/crud-youtube`)
-    //     .then((response) => {
-    //         console.log("res",response.data);
-    //         setUser(response.data);
-    //     })
-    // })
+    const getUser=()=>{
+        axios.get(`http://localhost:3000/posts`)
+        .then((response) => {
+            console.log("res",response.data);
+            setUser(response.data);
+        })
+    }
+    useEffect(()=>{
+       getUser();
+    })
 
-function deleteUser(){
-
+const  deleteUser= async(id) =>{
+    await axios.delete(`http://localhost:3000/posts`+id)
+    .then((response) => alert("deleted"))     
+     getUser();
 }    
 
   return (
@@ -45,18 +50,18 @@ function deleteUser(){
     {user.map((person)=>{
     
     return(
-        <>
+        <tr>
          
-        //   <td key={person.id}></td>
+        <td>{person.id}</td>
          <td>{person.name}</td>
          <td>{person.email}</td>
          <td>{person.phone}</td>
          <td><button className='btn-success'>Edit</button></td>
-         <td><button className='btn-danger'>Delete</button></td> 
-       </>)
+         <td><button className='btn-danger' onClick={()=>deleteUser(person.id)}>Delete</button></td> 
+       </tr>)
     })}
   
-    <tr>
+    {/* <tr>
       <th scope="row">1</th>
       <td>Sanya</td>
       <td>san@gmail.com</td>
@@ -64,7 +69,7 @@ function deleteUser(){
       <td><button className='btn-success'>Edit</button></td>
       <td><button className='btn-danger' onClick={() => deleteUser}>Delete</button></td>
     </tr>
-   
+    */}
   </tbody>
 </table>
 

@@ -16,9 +16,9 @@ const AddContact = () => {
         name: name,
         email: email,
       })
-    //   .then(() => {
-    //     history("/");
-    //   });
+      .then(() => {
+        history("/");
+      });
        if(res){
         alert("data submitted");
        }else{
