@@ -50,7 +50,7 @@ const  deleteUser= async(id) =>{
     {user.map((person)=>{
     
     return(
-        <tr>
+        <tr className="btn-primary">
          
         <td>{person.id}</td>
          <td>{person.name}</td>
