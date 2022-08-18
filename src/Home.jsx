@@ -47,6 +47,7 @@ const  deleteUser= async(id) =>{
   <tbody>
 
         
+        {/* //maping */}
     {user.map((person)=>{
     
     return(
