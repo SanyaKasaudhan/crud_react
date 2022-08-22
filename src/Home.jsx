@@ -46,9 +46,6 @@ const  deleteUser= async(id) =>{
   </thead>
   <tbody>
 
-        {/* jsk
-        df */}
-        {/* //maping */}
     {user.map((person)=>{
     
     return(
@@ -64,6 +61,24 @@ const  deleteUser= async(id) =>{
     })}
   
     {/* <tr>
+      <th scope="row">1</th>
+      <td>Sanya</td>
+      <td>san@gmail.com</td>
+      <td>98765432</td>
+      <td><button className='btn-success'>Edit</button></td>
+      <td><button className='btn-danger' onClick={() => deleteUser}>Delete</button></td>
+    </tr>
+
+    <tr>
+      <th scope="row">1</th>
+      <td>Sanya</td>
+      <td>san@gmail.com</td>
+      <td>98765432</td>
+      <td><button className='btn-success'>Edit</button></td>
+      <td><button className='btn-danger' onClick={() => deleteUser}>Delete</button></td>
+    </tr>
+
+    <tr>
       <th scope="row">1</th>
       <td>Sanya</td>
       <td>san@gmail.com</td>
