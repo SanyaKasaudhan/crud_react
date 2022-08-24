@@ -68,7 +68,10 @@ const  deleteUser= async(id) =>{
       <td><button className='btn-success'>Edit</button></td>
       <td><button className='btn-danger' onClick={() => deleteUser}>Delete</button></td>
     </tr>
-    <tr>
+    <tr>\\\
+
+
+    
       <th scope="row">1</th>
       <td>Sanya</td>
       <td>san@gmail.com</td>
